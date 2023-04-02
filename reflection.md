@@ -1,4 +1,13 @@
 Use this file to record your reflection on this assignment.
 
 - Which methods did you decide to `overload`, and why?
+
+House subclass - We chose to overload the moveIn and isResident methods to add a classYear string for the class year of the student moving in to allow the move in method to be more specific (for example, if two people wih the same name but different years move into the same house, the program can distinguish the two). The isResident method was overloaded to be able to check the classYear string when determining whether a student of a specific year was in the house (without being overloaded, the method doesn't work with the overloaded moveIn method). Finally, we overloaded the moveOut method for the same reason (it wouldn't work with the overloaded moveIn method unless we overloaded to also check the student's class year).
+
+Cafe subclass - We chose to overload the sellCoffee method to add a boolean stating whether or not the customer asked for the special flavoring in their coffee order because it's one of the few methods in the subclass. We overloaded the restock method to allow the cafe to check whether or not it has the special flavoring in stock like it can with the rest of its inventory, then restock it if they're out.
+
+Library subclass - We chose to overload the library constructor twice because the hashtable can't be overloaded without changing all the methods, and the boolean can't be overloaded at all. We first overloaded the constructor to add a boolean stating whether or not the library has a cafe, then again to add yet another boolean parameter stating whether or not the library has a children's play area. We had to add extra attributes in order to test whether the overloaded constructor was implemented properly.
+
 - What worked, what didn't, what advice would you give someone taking this course in the future?
+
+It was useful to consider how the user would make use of any overloaded methods or constructors we used before implementing them, as well as what other methods/constructors we'd have to change by overloading certain parts of the subclasses. For example, we ended up choosing to overload a constructor rather than a method in the Library subclass because if we did the former, we'd have to overload every single method to implement the additional parameter we'd add. We'd recommend that you make sure you have a solid understanding of the key differences between overriding and overloading methods and constructors before you start so that you don't confuse the two.
